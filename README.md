@@ -1,1 +1,1 @@
-Tutorials: [https://miracle-dev.readthedocs.io/en/latest/](https://github.com/sc-miracle/miracle)
+Tutorials: [Welcome to MIRACLE’s documentation! — miracle-dev 1.0 documentation](https://miracle-dev.readthedocs.io/en/latest/index.html)
