@@ -131,11 +131,14 @@ class MIRACLE():
         self.batch_num_rep = 0
         self.batch_num_curr = 0
         self.mods = []
+        self.n_cells_orig = []
         for i, d in enumerate(data):
             if status[i] == 'replay':
                 self.batch_num_rep += d.num_subset
             else:
                 self.batch_num_curr += d.num_subset
+            for b in d.cell_names_orig.values():
+                self.n_cells_orig.append(len(b))
             self.mods += list(d.mods.values())
         self.total_num = self.batch_num_rep + self.batch_num_curr
         self.s_joint = [[i] for i in range(self.total_num)]
@@ -355,9 +358,9 @@ class MIRACLE():
             if self.batch_num_rep == 0:
                 rnt_ = 1
             elif self.batch_num_rep == 0 or i%2 < 1:
-                rnt_ = self.batch_num_curr / (self.batch_num_rep  + self.batch_num_curr )
+                rnt_ = self.n_cells_orig[data['s']['joint'][0].item()]/sum(self.n_cells_orig)
             else:
-                rnt_ = self.batch_num_rep / (self.batch_num_rep  + self.batch_num_curr)
+                rnt_ = self.n_cells_orig[data['s']['joint'][0].item()]/sum(self.n_cells_orig) * self.batch_num_rep
             loss = self.__run_iter__(split, epoch_id, data, rnt_)
             loss_total += loss
         loss_avg = loss_total / len(data_loader)
