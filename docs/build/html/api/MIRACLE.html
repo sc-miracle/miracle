@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; miracle-dev 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reproducibility" href="../reproducibility.html" />
+    <link rel="prev" title="Train and transfer label" href="../notebooks/transfer_label-t.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            miracle-dev
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prepare.html">Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_preprocess.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials1.html">Tutorial: Continual Integration on Trimodality Mosaic Data (RNA+ADT+ATAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials2.html">Tutorial: Multimodal Data Label Transfer on Large-scale Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reproducibility.html">Reproducibility</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">miracle-dev</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/MIRACLE.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-modules.MIRACLE">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-modules.MIRACLE" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.MIRACLE.</span></span><span class="sig-name descname"><span class="pre">MIRACLE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.BallTreeSubsample">
+<span class="sig-name descname"><span class="pre">BallTreeSubsample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.BallTreeSubsample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.BallTreeSubsample" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.gen_datasets">
+<span class="sig-name descname"><span class="pre">gen_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.gen_datasets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.gen_datasets" title="Permalink to this definition"></a></dt>
+<dd><p>Generate dataset object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>create_data object</em>) – a “create_data” object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.init_model">
+<span class="sig-name descname"><span class="pre">init_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'denovo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_drop_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grad_clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims_enc_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[16,</span> <span class="pre">16]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims_enc_chr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[128,</span> <span class="pre">32]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims_enc_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1024,</span> <span class="pre">128]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims_discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[128,</span> <span class="pre">64]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ln'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.init_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.init_model" title="Permalink to this definition"></a></dt>
+<dd><p>Initalize the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_mod</strong> (<em>str</em>) – The action to the model. 
+- denovo : To train a model without using replay data, 
+you can provide either the model_path or benchmark_path 
+parameter to load the weights or training status from a file. 
+If you wish to resume training from a specific checkpoint, 
+please ensure that you provide both the model_path and benchmark_path parameters.
+- continual : To train a model using replay data, make sure to initialize the object 
+with data under the “replay” status.</p></li>
+<li><p><strong>lr</strong> (<em>float</em>) – Learning rate.</p></li>
+<li><p><strong>drop_s</strong> (<em>int</em>) – Force to drop s.</p></li>
+<li><p><strong>s_drop_rate</strong> (<em>float</em>) – Drop out rate for s.</p></li>
+<li><p><strong>grad_clip</strong> (<em>int</em>) – Whether to clip the grad during training.</p></li>
+<li><p><strong>norm</strong> (<em>str</em>) – Type of normalization.</p></li>
+<li><p><strong>drop</strong> (<em>float</em>) – Drop out rate for the hidden layers.</p></li>
+<li><p><strong>dim_c</strong> (<em>int</em>) – Dimension of the variable c.</p></li>
+<li><p><strong>dim_b</strong> (<em>int</em>) – Dimension of the variable b.</p></li>
+<li><p><strong>dims_enc_s</strong> (<em>list</em>) – Dimensions of the encoder layers for s.</p></li>
+<li><p><strong>dims_enc_chr</strong> (<em>list</em>) – Dimensions of the encoder layers for chromosomes. (Used when there is atac data)</p></li>
+<li><p><strong>dims_enc_x</strong> (<em>list</em>) – Dimensions of the encoder layers for data (except atac).</p></li>
+<li><p><strong>dims_discriminator</strong> (<em>list</em>) – Dimensions of the discriminator layers.</p></li>
+<li><p><strong>model_path</strong> (<em>str</em>) – The path for the model weight. A “.pt” file.</p></li>
+<li><p><strong>benchmark_path</strong> (<em>str</em>) – The path for the training status. A “.toml” file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pack'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">des_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./data/processed/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.pack" title="Permalink to this definition"></a></dt>
+<dd><p>Pack the data for future training or sharing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_task_name</strong> (<em>str</em>) – The output name. des_dir + output_task_name</p></li>
+<li><p><strong>des_dir</strong> (<em>str</em>) – Path to save the data.</p></li>
+<li><p><strong>n_sample</strong> (<em>int</em>) – The target number of samples.</p></li>
+<li><p><strong>pred_dir</strong> (<em>str</em>) – Path of the embeddings.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./result/experiment/predict/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_latent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_latent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">impute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mini_batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict the embeddings or their imputed expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>save_dir</strong> (<em>str</em>) – The path to save the predicted files.</p></li>
+<li><p><strong>joint_latent</strong> (<em>bool</em>) – Whether to save the joint embeddings.</p></li>
+<li><p><strong>mod_latent</strong> (<em>bool</em>) – Whether to save the embeddings for each modalities.</p></li>
+<li><p><strong>impute</strong> (<em>bool</em>) – Whether to save the imputed data.</p></li>
+<li><p><strong>batch_correct</strong> (<em>bool</em>) – Whether to save the batch corrected expression data.</p></li>
+<li><p><strong>translate</strong> (<em>bool</em>) – Whether to save the translation embeddings (from a modality to another modality).</p></li>
+<li><p><strong>input</strong> (<em>bool</em>) – Whether to save the inputs.</p></li>
+<li><p><strong>mini_batch_size</strong> (<em>int</em>) – The mini-batch size for saving. Influence the cell number in the csv file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.randomsampling">
+<span class="sig-name descname"><span class="pre">randomsampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.randomsampling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.randomsampling" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.read_embeddings">
+<span class="sig-name descname"><span class="pre">read_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">emb_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_latent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_latent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">impute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'modality'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.read_embeddings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.read_embeddings" title="Permalink to this definition"></a></dt>
+<dd><p>Get embeddings or other outputs from a path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emb_path</strong> (<em>str</em>) – If not given, use the path from the function predict() if you have run it.</p></li>
+<li><p><strong>joint_latent</strong> (<em>bool</em>) – Whether to read the joint embeddings.</p></li>
+<li><p><strong>impute</strong> (<em>bool</em>) – Whether to read the imputed expression data.</p></li>
+<li><p><strong>batch_correct</strong> (<em>bool</em>) – Whether to read the batch corrected expression data.</p></li>
+<li><p><strong>translate</strong> (<em>bool</em>) – Whether to read the translated embeddings.</p></li>
+<li><p><strong>input</strong> (<em>bool</em>) – Whether to read the inputs.</p></li>
+<li><p><strong>group_by</strong> (<em>bool</em>) – Group the data by “modality” or “batch”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The embeddings from the given path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.recursive_sampling">
+<span class="sig-name descname"><span class="pre">recursive_sampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.recursive_sampling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.recursive_sampling" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.sample" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.split_layer">
+<span class="sig-name descname"><span class="pre">split_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.split_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.split_layer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_epoch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mini_batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./result/experiment/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.train" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.MIRACLE.viz_loss">
+<span class="sig-name descname"><span class="pre">viz_loss</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#MIRACLE.viz_loss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.MIRACLE.viz_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Visualize the loss</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="modules.MIRACLE.create_data">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">modules.MIRACLE.</span></span><span class="sig-name descname"><span class="pre">create_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#create_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.create_data" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An object named MIRACLE will be created to represent the data. The data information, including the cell number and features, will be automatically detected.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.MIRACLE.create_data.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/modules/MIRACLE.html#create_data.info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.MIRACLE.create_data.info" title="Permalink to this definition"></a></dt>
+<dd><p>Print information.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../notebooks/transfer_label-t.html" class="btn btn-neutral float-left" title="Train and transfer label" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reproducibility.html" class="btn btn-neutral float-right" title="Reproducibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anonymous.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

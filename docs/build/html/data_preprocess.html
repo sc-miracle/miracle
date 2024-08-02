@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Preprocessing &mdash; miracle-dev 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial: Continual Integration on Trimodality Mosaic Data (RNA+ADT+ATAC)" href="tutorials1.html" />
+    <link rel="prev" title="Preparation" href="prepare.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            miracle-dev
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prepare.html">Preparation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Preprocessing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quality-control-and-feature-selection">Quality control and feature selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combine-batches">Combine batches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-format">Input Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials1.html">Tutorial: Continual Integration on Trimodality Mosaic Data (RNA+ADT+ATAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials2.html">Tutorial: Multimodal Data Label Transfer on Large-scale Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/MIRACLE.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">miracle-dev</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Preprocessing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_preprocess.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="data-preprocessing">
+<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this heading"></a></h1>
+<div class="section" id="quality-control-and-feature-selection">
+<h2>Quality control and feature selection<a class="headerlink" href="#quality-control-and-feature-selection" title="Permalink to this heading"></a></h2>
+<p>The count matrices of RNA and ADT were processed via <code class="docutils literal notranslate"><span class="pre">Seurat</span></code>. The ATAC fragment files were processed using <code class="docutils literal notranslate"><span class="pre">Signac</span></code>, and peaks were called via the Python package <code class="docutils literal notranslate"><span class="pre">MACS2</span></code>. We performed quality control separately for each batch. Briefly, metrics of detected <strong>gene number per cell, total UMI number, percentage of mitochondrial RNA reads, total protein tag number, total fragment number, transcription start site score and nucleosome signal</strong> were evaluated. We manually checked the distributions of these metrics and set customized criteria to filter low-quality cells in each batch. For each batch, we adopted common normalization strategies for RNA, ADT and ATAC data, respectively. Specifically, for RNA data, UMI count matrices are normalized and log transformed using the <code class="docutils literal notranslate"><span class="pre">NormalizeData</span></code> function in Seurat. For ADT data, tag count matrices are centered log ratio normalized using the <code class="docutils literal notranslate"><span class="pre">NormalizeData</span></code> function in Seurat. For ATAC data, fragment matrices are term frequency inverse document frequency normalized using the <code class="docutils literal notranslate"><span class="pre">RunTFIDF</span></code> function in Signac. To integrate batches profiled by various technologies, we need to create a union of features for RNA, ADT and ATAC data, respectively. For RNA data, first, low-frequency genes are removed based on gene occurrence frequency across all batches. We then select <strong>4,000</strong> highly variable genes using the <code class="docutils literal notranslate"><span class="pre">FindVariableFeatures</span></code> function with default parameters in each batch. The union of these highly variable genes is ranked using the <code class="docutils literal notranslate"><span class="pre">SelectIntegrationFeatures</span></code> function, and the top 4,000 genes are selected. In addition, we also retain genes that encode proteins targeted by the antibodies. For ADT data, the union of antibodies in all batches is retained for data integration. For ATAC data, we used the <code class="docutils literal notranslate"><span class="pre">reduce</span></code> function in Signac to merge all intersecting peaks across batches and then recalculated the fragment counts in the merged peaks. The merged peaks are used for data integration. The input data are UMI counts for RNA data, tag counts for ADT data and binarized fragment counts for ATAC data. For each modality, the union of features from all batches are used. Counts of missing features are set to 0. Binary feature masks are generated accordingly, where 1 and 0 denote presented and missing features, respectively.</p>
+</div>
+<div class="section" id="combine-batches">
+<h2>Combine batches<a class="headerlink" href="#combine-batches" title="Permalink to this heading"></a></h2>
+<p>We provide an R script that combines different batches and obtains their union features. The expression matrix will be extracted from the Seurat object and saved as CSV files. To run combine the batches of data using our codes, a standard data configure file is necessary. Please add your item in the file <code class="docutils literal notranslate"><span class="pre">./configs/data.toml</span></code>.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: center;">key</th>
+<th>explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">raw_data_dirs</td>
+<td>The directory corresponding to each batch. The Seurat objects for RNA, ADT modalities should be<br />stored in the <code>seurat</code> folder under the respective batch directory.</td>
+</tr>
+<tr>
+<td style="text-align: center;">raw_data_frags</td>
+<td>The location of the corresponding fragment files for ATAC should be under <code>raw_data_dirs/raw_data_frags</code>. If the batch <br />does not contain ATAC data, please fill it with "".</td>
+</tr>
+<tr>
+<td style="text-align: center;">combs</td>
+<td>The omics combination corresponding to each batch. Various omics combinations can be achieved by controlling this item.</td>
+</tr>
+<tr>
+<td style="text-align: center;">comb_ratios</td>
+<td>The proportion of data used for each batch, where 1 indicates that all the data in the dataset will be used.</td>
+</tr>
+<tr>
+<td style="text-align: center;">s_joint</td>
+<td>ID for batch.</td>
+</tr>
+<tr>
+<td style="text-align: center;">train_ratio</td>
+<td>The proportion of training data, it is recommended to be 1.</td>
+</tr>
+<tr>
+<td style="text-align: center;">N</td>
+<td>Mini-batch size. Default is 256.</td>
+</tr>
+</tbody>
+</table><p>Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Rscript preprocess/combine_subsets.R --task &lt;task name&gt;
+</pre></div>
+</div>
+<p>To align the ATAC data, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>preprocess/combine_unseen.R --reference &lt;reference task&gt; --task &lt;task&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="input-format">
+<h2>Input Format<a class="headerlink" href="#input-format" title="Permalink to this heading"></a></h2>
+<p>MIRACLE does not use the AnnData object as input, but instead divides the data into separate CSV files per cell. This helps reduce the amount of memory consumed during the training process. You can use the following script to split a CSV file containing multiple cell data into multiple CSV files divided by cells.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python preprocess/split_mat.py --task &lt;task_name&gt;
+</pre></div>
+</div>
+<p>Then you will get a directory containing lots of CSV files like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#./data/processed/</span>
+<span class="o">|--</span> <span class="n">dataset_1</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">feat</span>  <span class="c1"># feature information</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">feat_dims</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">feat_names_adt</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">feat_names_atac</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">feat_names_rna</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">subset_0</span> 
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">mask</span> <span class="c1"># binary mask for rna and adt</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">rna</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">adt</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">vec</span>  <span class="c1"># csv file for every modality of every cell</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">rna</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00000.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00001.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="o">......</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">adt</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00000.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00001.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="o">......</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">atac</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00000.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="mf">00001.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="o">......</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span><span class="n">cell_names</span><span class="o">.</span><span class="n">csv</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span><span class="n">cell_names_sampled</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># if there is</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">subset_1</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="o">......</span>
+</pre></div>
+</div>
+<p>See the tutorials for examples.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prepare.html" class="btn btn-neutral float-left" title="Preparation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials1.html" class="btn btn-neutral float-right" title="Tutorial: Continual Integration on Trimodality Mosaic Data (RNA+ADT+ATAC)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anonymous.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

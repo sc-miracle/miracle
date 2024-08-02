@@ -1,0 +1,7 @@
+data/
+temp/
+dec/
+__pycache__/
+result/
+teadog.ipynb
+not_verified
