@@ -6,7 +6,7 @@
 Welcome to MIRACLE's documentation!
 =======================================
 
-.. figure:: miracle_main.png
+.. figure:: Figure1.pdf
    :width: 2400
    :alt: miracle figure
    :align: left
