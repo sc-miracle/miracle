@@ -1,0 +1,11 @@
+[default]
+dim_c = 32
+dims_enc_s = [16, 16]
+dims_enc_chr = [128, 32]
+dims_enc_x = [1024, 128]
+dims_discriminator = [128, 64]
+norm = "ln"
+drop = 0.2
+
+[L2]
+dims_enc_x = [1024]

@@ -1,0 +1,1010 @@
+[teadog_P1]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/dogma_label_mask/P1",
+]
+raw_data_frags = [
+
+    "GSM5065530_DIG_CTRL_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P2]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/dogma_label_mask/P2",
+]
+raw_data_frags = [
+
+    "GSM5065533_DIG_STIM_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P3]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/dogma_label_mask/P3",
+]
+raw_data_frags = [
+
+    "GSM5065524_LLL_CTRL_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P4]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/dogma_label_mask/P4",
+]
+raw_data_frags = [
+
+    "GSM5065527_LLL_STIM_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P5]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/tea_label_mask/P5",
+]
+raw_data_frags = [
+
+    "GSM5123951_X066-MP0C1W3_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P6]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/tea_label_mask/P6",
+]
+raw_data_frags = [
+
+    "GSM5123952_X066-MP0C1W4_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P7]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/tea_label_mask/P7",
+]
+raw_data_frags = [
+
+    "GSM5123953_X066-MP0C1W5_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[teadog_P8]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/tea_label_mask/P8",
+]
+raw_data_frags = [
+
+    "GSM5123954_X066-MP0C1W6_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+]
+combs = [
+    # tea
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ]
+]
+s_joint = [
+    # dogma
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+
+[teadog]
+tasks = [
+    'teadog_P1',
+    'teadog_P2',
+    'teadog_P3',
+    'teadog_P4',
+    'teadog_P5',
+    'teadog_P6',
+    'teadog_P7',
+    'teadog_P8',
+]
+raw_data_dirs = [
+    "data/sct/atac+rna+adt/dogma_label_mask/P1",
+    "data/sct/atac+rna+adt/dogma_label_mask/P2",
+    "data/sct/atac+rna+adt/dogma_label_mask/P3",
+    "data/sct/atac+rna+adt/dogma_label_mask/P4",
+    "data/sct/atac+rna+adt/tea_label_mask/P5",
+    "data/sct/atac+rna+adt/tea_label_mask/P6",
+    "data/sct/atac+rna+adt/tea_label_mask/P7",
+    "data/sct/atac+rna+adt/tea_label_mask/P8",
+]
+raw_data_frags = [
+    "GSM5065530_DIG_CTRL_fragments.tsv.gz",
+    "GSM5065533_DIG_STIM_fragments.tsv.gz",
+    "GSM5065524_LLL_CTRL_fragments.tsv.gz",
+    "GSM5065527_LLL_STIM_fragments.tsv.gz",
+    "GSM5123951_X066-MP0C1W3_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123952_X066-MP0C1W4_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123953_X066-MP0C1W5_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123954_X066-MP0C1W6_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+]
+combs = [
+    [ ["atac", "adt"] ],
+    [ ["atac", "rna"] ],
+    [ ["rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "adt"] ],
+    [ ["atac", "rna"] ],
+    [ ["rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+]
+comb_ratios = [ [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ] ]
+s_joint =     [ [ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ] ]
+train_ratio = 1
+N = 256
+
+[wnn]
+tasks = [
+    'wnn_p1',
+    'wnn_p2',
+    'wnn_p3',
+    'wnn_p4',
+    'wnn_p5',
+    'wnn_p6',
+    'wnn_p7',
+    'wnn_p8'
+]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p1_0_cellmask",
+    "data/raw/rna+adt/wnn/p2_0_cellmask",
+    "data/raw/rna+adt/wnn/p3_0_cellmask",
+    "data/raw/rna+adt/wnn/p4_0_cellmask",
+    "data/raw/rna+adt/wnn/p5_0_cellmask",
+    "data/raw/rna+adt/wnn/p6_0_cellmask",
+    "data/raw/rna+adt/wnn/p7_0_cellmask",
+    "data/raw/rna+adt/wnn/p8_0_cellmask",
+]
+raw_data_frags = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+]
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ],
+]
+train_ratio = 1
+N = 256
+
+[wnn_p1]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p1_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p2]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p2_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p3]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p3_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p4]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p4_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p5]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p5_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p6]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p6_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p7]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p7_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+[wnn_p8]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p8_0_cellmask",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna", "adt"] ],
+]
+comb_ratios = [ 
+    [ 1 ]
+]
+s_joint = [
+    [ 0 ]
+]
+train_ratio = 1
+N = 256
+
+
+[dcm_hcm]
+tasks = [
+"dcm_hcm_1",
+"dcm_hcm_2",
+"dcm_hcm_3",
+"dcm_hcm_4",
+"dcm_hcm_5",
+"dcm_hcm_6",
+"dcm_hcm_7",
+"dcm_hcm_8",
+"dcm_hcm_9",
+"dcm_hcm_10",
+"dcm_hcm_11",
+"dcm_hcm_12",
+"dcm_hcm_13",
+"dcm_hcm_14",
+"dcm_hcm_15",
+"dcm_hcm_16",
+"dcm_hcm_17",
+"dcm_hcm_18",
+"dcm_hcm_19",
+"dcm_hcm_20",
+"dcm_hcm_21",
+"dcm_hcm_22",
+"dcm_hcm_23",
+"dcm_hcm_24",
+"dcm_hcm_25",
+"dcm_hcm_26",
+"dcm_hcm_27",
+"dcm_hcm_28",
+"dcm_hcm_29",
+"dcm_hcm_30",
+"dcm_hcm_31",
+"dcm_hcm_32",
+"dcm_hcm_33",
+"dcm_hcm_34",
+"dcm_hcm_35",
+"dcm_hcm_36",
+"dcm_hcm_37",
+"dcm_hcm_38",
+"dcm_hcm_39",
+"dcm_hcm_40",
+"dcm_hcm_41",
+"dcm_hcm_42",
+]
+raw_data_dirs = [
+    "data/raw/dcm_hcm/P1290",
+    "data/raw/dcm_hcm/P1300",
+    "data/raw/dcm_hcm/P1304",
+    "data/raw/dcm_hcm/P1358",
+    "data/raw/dcm_hcm/P1371",
+    "data/raw/dcm_hcm/P1422",
+    "data/raw/dcm_hcm/P1425",
+    "data/raw/dcm_hcm/P1430",
+    "data/raw/dcm_hcm/P1437",
+    "data/raw/dcm_hcm/P1447",
+    "data/raw/dcm_hcm/P1462",
+    "data/raw/dcm_hcm/P1472",
+    "data/raw/dcm_hcm/P1479",
+    "data/raw/dcm_hcm/P1504",
+    "data/raw/dcm_hcm/P1508",
+    "data/raw/dcm_hcm/P1510",
+    "data/raw/dcm_hcm/P1515",
+    "data/raw/dcm_hcm/P1516",
+    "data/raw/dcm_hcm/P1539",
+    "data/raw/dcm_hcm/P1540",
+    "data/raw/dcm_hcm/P1547",
+    "data/raw/dcm_hcm/P1549",
+    "data/raw/dcm_hcm/P1558",
+    "data/raw/dcm_hcm/P1561",
+    "data/raw/dcm_hcm/P1582",
+    "data/raw/dcm_hcm/P1600",
+    "data/raw/dcm_hcm/P1602",
+    "data/raw/dcm_hcm/P1603",
+    "data/raw/dcm_hcm/P1606",
+    "data/raw/dcm_hcm/P1610",
+    "data/raw/dcm_hcm/P1617",
+    "data/raw/dcm_hcm/P1622",
+    "data/raw/dcm_hcm/P1630",
+    "data/raw/dcm_hcm/P1631",
+    "data/raw/dcm_hcm/P1678",
+    "data/raw/dcm_hcm/P1685",
+    "data/raw/dcm_hcm/P1702",
+    "data/raw/dcm_hcm/P1707",
+    "data/raw/dcm_hcm/P1718",
+    "data/raw/dcm_hcm/P1722",
+    "data/raw/dcm_hcm/P1726",
+    "data/raw/dcm_hcm/P1735",
+]
+raw_data_frags = [ 
+    "", "", "", "","", "","", "", "", "",
+    "", "", "", "","", "","", "", "", "",
+    "", "", "", "","", "","", "", "", "",
+    "", "", "", "","", "","", "", "", "",
+    "", ""
+    ]
+
+combs = [ 
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],],
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],],
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],],
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],],
+    [ [ "rna",],], [ [ "rna",],]
+    ]
+
+comb_ratios = [ 
+    [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,],
+    [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,],
+    [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,],
+    [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,],
+    [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,], [ 1,],
+    [ 1,], [ 1,],
+    ]
+s_joint = [ 
+    [ 0,], [ 1,], [ 2,], [ 3,],[ 4,],[ 5,],[ 6,],[ 7,],
+    [ 8,], [ 9,], [ 10,], [ 11,],[ 12,],[ 13,],[ 14,],[ 15,],
+    [ 16,], [ 17,], [ 18,], [ 19,],[ 20,],[ 21,],[ 22,],[ 23,],
+    [ 24,], [ 25,], [ 26,], [ 27,],[ 28,],[ 29,],[ 30,],[ 31,],
+    [ 32,], [ 33,], [ 34,], [ 35,],[ 36,],[ 37,],[ 38,],[ 39,],
+    [ 40,], [ 41,]
+    ]
+train_ratio = 1
+N = 256
+
+[dcm_hcm_1]
+raw_data_dirs=["data/raw/dcm_hcm/P1290",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_2]
+raw_data_dirs=["data/raw/dcm_hcm/P1300",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_3]
+raw_data_dirs=["data/raw/dcm_hcm/P1304",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_4]
+raw_data_dirs=["data/raw/dcm_hcm/P1358",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_5]
+raw_data_dirs=["data/raw/dcm_hcm/P1371",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_6]
+raw_data_dirs=["data/raw/dcm_hcm/P1422",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_7]
+raw_data_dirs=["data/raw/dcm_hcm/P1425",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_8]
+raw_data_dirs=["data/raw/dcm_hcm/P1430",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_9]
+raw_data_dirs=["data/raw/dcm_hcm/P1437",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_10]
+raw_data_dirs=["data/raw/dcm_hcm/P1447",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_11]
+raw_data_dirs=["data/raw/dcm_hcm/P1462",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_12]
+raw_data_dirs=["data/raw/dcm_hcm/P1472",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_13]
+raw_data_dirs=["data/raw/dcm_hcm/P1479",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_14]
+raw_data_dirs=["data/raw/dcm_hcm/P1504",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_15]
+raw_data_dirs=["data/raw/dcm_hcm/P1508",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_16]
+raw_data_dirs=["data/raw/dcm_hcm/P1510",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_17]
+raw_data_dirs=["data/raw/dcm_hcm/P1515",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_18]
+raw_data_dirs=["data/raw/dcm_hcm/P1516",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_19]
+raw_data_dirs=["data/raw/dcm_hcm/P1539",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_20]
+raw_data_dirs=["data/raw/dcm_hcm/P1540",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_21]
+raw_data_dirs=["data/raw/dcm_hcm/P1547",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_22]
+raw_data_dirs=["data/raw/dcm_hcm/P1549",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_23]
+raw_data_dirs=["data/raw/dcm_hcm/P1558",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_24]
+raw_data_dirs=["data/raw/dcm_hcm/P1561",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_25]
+raw_data_dirs=["data/raw/dcm_hcm/P1582",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_26]
+raw_data_dirs=["data/raw/dcm_hcm/P1600",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_27]
+raw_data_dirs=["data/raw/dcm_hcm/P1602",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_28]
+raw_data_dirs=["data/raw/dcm_hcm/P1603",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_29]
+raw_data_dirs=["data/raw/dcm_hcm/P1606",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_30]
+raw_data_dirs=["data/raw/dcm_hcm/P1610",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_31]
+raw_data_dirs=["data/raw/dcm_hcm/P1617",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_32]
+raw_data_dirs=["data/raw/dcm_hcm/P1622",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_33]
+raw_data_dirs=["data/raw/dcm_hcm/P1630",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_34]
+raw_data_dirs=["data/raw/dcm_hcm/P1631",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_35]
+raw_data_dirs=["data/raw/dcm_hcm/P1678",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_36]
+raw_data_dirs=["data/raw/dcm_hcm/P1685",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_37]
+raw_data_dirs=["data/raw/dcm_hcm/P1702",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_38]
+raw_data_dirs=["data/raw/dcm_hcm/P1707",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_39]
+raw_data_dirs=["data/raw/dcm_hcm/P1718",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_40]
+raw_data_dirs=["data/raw/dcm_hcm/P1722"]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_41]
+raw_data_dirs=["data/raw/dcm_hcm/P1726",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+[dcm_hcm_42]
+raw_data_dirs=["data/raw/dcm_hcm/P1735",]
+raw_data_frags=[""]
+comb_ratios =[[ 1,], ]
+combs = [ [ [ "rna",],],]
+s_joint = [[ 0,]]
+train_ratio = 1
+N = 256
+
+[human_heart_rna_atac]
+raw_data_dirs=[
+    "data/raw/human_heart_multiomics/HCAHeart9508627",
+    "data/raw/human_heart_multiomics/HCAHeart9508628",
+    "data/raw/human_heart_multiomics/HCAHeart9508629",
+    "data/raw/human_heart_multiomics/HCAHeart9845431",
+    "data/raw/human_heart_multiomics/HCAHeart9845432",
+    "data/raw/human_heart_multiomics/HCAHeart9845433",
+    "data/raw/human_heart_multiomics/HCAHeart9845434",
+    "data/raw/human_heart_multiomics/HCAHeart9845435",
+    "data/raw/human_heart_multiomics/HCAHeart9845436",
+    "data/raw/human_heart_multiomics/HCAHeartST10773165",
+    "data/raw/human_heart_multiomics/HCAHeartST10773166",
+    "data/raw/human_heart_multiomics/HCAHeartST10773167",
+    "data/raw/human_heart_multiomics/HCAHeartST10773168",
+    "data/raw/human_heart_multiomics/HCAHeartST10773169",
+    "data/raw/human_heart_multiomics/HCAHeartST10773170",
+    "data/raw/human_heart_multiomics/HCAHeartST10773171",
+    "data/raw/human_heart_multiomics/HCAHeartST11064574",
+    "data/raw/human_heart_multiomics/HCAHeartST11064575",
+    "data/raw/human_heart_multiomics/HCAHeartST11064576",
+    "data/raw/human_heart_multiomics/HCAHeartST11064577",
+    "data/raw/human_heart_multiomics/HCAHeartST11350184",
+    "data/raw/human_heart_multiomics/HCAHeartST11350186",
+    "data/raw/human_heart_multiomics/HCAHeartST11350187",
+    "data/raw/human_heart_multiomics/HCAHeartST11350192",
+    "data/raw/human_heart_multiomics/HCAHeartST11350193",
+    "data/raw/human_heart_multiomics/HCAHeartST11350194",
+    "data/raw/human_heart_multiomics/HCAHeartST11350195",
+    "data/raw/human_heart_multiomics/HCAHeartST11350196",
+    "data/raw/human_heart_multiomics/HCAHeartST11350197",
+    "data/raw/human_heart_multiomics/HCAHeartST11350198",
+    "data/raw/human_heart_multiomics/HCAHeartST13146201",
+    "data/raw/human_heart_multiomics/HCAHeartST13146202",
+    "data/raw/human_heart_multiomics/HCAHeartST13146203",
+    "data/raw/human_heart_multiomics/HCAHeartST13146204",
+    "data/raw/human_heart_multiomics/HCAHeartST13146205",
+    "data/raw/human_heart_multiomics/HCAHeartST13146206",
+    "data/raw/human_heart_multiomics/HCAHeartST13146207",
+    "data/raw/human_heart_multiomics/HCAHeartST13146208",
+    "data/raw/human_heart_multiomics/HCAHeartST13168796",
+    "data/raw/human_heart_multiomics/HCAHeartST13180615",
+    "data/raw/human_heart_multiomics/HCAHeartST13180616",
+    "data/raw/human_heart_multiomics/HCAHeartST13180617",
+    "data/raw/human_heart_multiomics/HCAHeartST13180618",
+    "data/raw/human_heart_multiomics/HCAHeartST13180619",
+    "data/raw/human_heart_multiomics/HCAHeartST13189995",
+    "data/raw/human_heart_multiomics/HCAHeartST13189996",
+    "data/raw/human_heart_multiomics/HCAHeartST13189997"
+]
+raw_data_frags=[
+    "","","","","","","","","","",
+    "","","","","","","","","","",
+    "","","","","","","","","","",
+    "","","","","","","","","","",
+    "","","","","","",""
+    ]
+comb_ratios =[[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ]]
+combs = [ 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [ [ "rna", "atac"],], [[ "rna", "atac"]], 
+    [ [ "rna", "atac"],], [ [ "rna", "atac"],]
+    ]
+s_joint = [[ 0,], [ 1 ], [ 2 ],[ 3 ],[ 4 ],[ 5 ],[ 6 ],[ 7 ],[ 8 ],[ 9 ],
+[ 10,], [ 11 ], [ 12 ],[ 13 ],[ 14 ],[ 15 ],[ 16 ],[ 17 ],[ 18 ],[ 19 ],
+[ 20,], [ 21 ], [ 22 ],[ 23 ],[ 24 ],[ 25 ],[ 26 ],[ 27 ],[ 28 ],[ 29 ],
+[ 30,], [ 31 ], [ 32 ],[ 33 ],[ 34 ],[ 35 ],[ 36 ],[ 37 ],[ 38 ],[ 39 ],
+[ 40,], [ 41 ], [ 42 ],[ 43 ],[ 44 ],[ 45 ],[ 46 ]
+]
+train_ratio = 1
+N = 256
+
+
+[human_heart_rna]
+raw_data_dirs=[
+    "data/raw/human_heart_multiomics/A61_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AH1_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AH2_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AV3_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AV10_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AV13_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/AV14_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/D3_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/D7_Nuclei_Multiome-v1",
+    "data/raw/human_heart_multiomics/D8_Nuclei_Multiome-v1",
+]
+raw_data_frags=[
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+    ]
+comb_ratios =[[ 1,], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ]]
+combs = [ 
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [[ "rna",]], 
+    [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [ [ "rna",],], [[ "rna",]], 
+    ]
+s_joint = [[ 0,], [ 1 ], [ 2 ],[ 3 ],[ 4 ],[ 5 ],[ 6 ],[ 7 ],[ 8 ],[ 9 ]]
+train_ratio = 1
+N = 256
