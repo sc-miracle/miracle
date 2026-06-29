@@ -1,0 +1,478 @@
+[atlas_new]
+raw_data_dirs = [
+    # dogma
+    "data/sct/atac+rna+adt/dogma/lll_ctrl",
+    "data/sct/atac+rna+adt/dogma/lll_stim",
+    "data/sct/atac+rna+adt/dogma/dig_ctrl",
+    "data/sct/atac+rna+adt/dogma/dig_stim",
+    # tea
+    "data/sct/atac+rna+adt/tea/TEA-seq/w1",
+    "data/sct/atac+rna+adt/tea/TEA-seq/w3",
+    "data/sct/atac+rna+adt/tea/TEA-seq/w4",
+    "data/sct/atac+rna+adt/tea/TEA-seq/w5",
+    "data/sct/atac+rna+adt/tea/TEA-seq/w6",
+    # tea multiome
+    "data/sct/atac+rna/tea/Multiome/tea_multi_w1",
+    "data/sct/atac+rna/tea/Multiome/tea_multi_w2",
+    # 10x multiome
+    "data/sct/atac+rna/10x_multiome_chrom_x_10k",
+    "data/sct/atac+rna/10x_multiome_chrom_c_10k",
+    "data/sct/atac+rna/10x_multiome_arc2_10k",
+    "data/sct/atac+rna/10x_multiome_arc2_3k",
+    # asap
+    "data/sct/atac+adt/asap/PBMC_stimulation/asap_ctrl",
+    "data/sct/atac+adt/asap/PBMC_stimulation/asap_stim",
+    # asap cite
+    "data/sct/rna+adt/asap/PBMC_stimulation/cite_ctrl",
+    "data/sct/rna+adt/asap/PBMC_stimulation/cite_stim",
+    # wnn
+    "data/sct/rna+adt/wnn/p1_0",
+    "data/sct/rna+adt/wnn/p2_0",
+    "data/sct/rna+adt/wnn/p3_0",
+    "data/sct/rna+adt/wnn/p4_0",
+    "data/sct/rna+adt/wnn/p5_0",
+    "data/sct/rna+adt/wnn/p6_0",
+    "data/sct/rna+adt/wnn/p7_0",
+    "data/sct/rna+adt/wnn/p8_0",
+    
+    # neat
+    "data/sct/new_atlas/NEAT/lane1/",
+    "data/sct/new_atlas/NEAT/lane2/",
+    # "data/sct/new_atlas/NEAT/stand_multi/",
+    # dogcite
+    "data/sct/new_atlas/DOGCITE/CITE/",
+    "data/sct/new_atlas/DOGCITE/DIG/",
+    "data/sct/new_atlas/DOGCITE/LLL/",
+    "data/sct/new_atlas/DOGCITE/DOGMA/",
+    # issaac
+    "data/sct/new_atlas/ISSAAC/",
+]
+raw_data_frags = [
+    # dogma
+    "GSM5065524_LLL_CTRL_fragments.tsv.gz",
+    "GSM5065527_LLL_STIM_fragments.tsv.gz",
+    "GSM5065530_DIG_CTRL_fragments.tsv.gz",
+    "GSM5065533_DIG_STIM_fragments.tsv.gz",
+    # tea
+    "GSM4949911_X061-AP0C1W1_leukopak_perm-cells_tea_fulldepth_atac_filtered_fragments.tsv.gz",
+    "GSM5123951_X066-MP0C1W3_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123952_X066-MP0C1W4_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123953_X066-MP0C1W5_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123954_X066-MP0C1W6_leukopak_perm-cells_tea_200M_atac_filtered_fragments.tsv.gz",
+    # tea multiome
+    "GSM5123949_X066-MP0C1W1_leukopak_nuclei_multiome_200M_atac_filtered_fragments.tsv.gz",
+    "GSM5123950_X066-MP0C1W2_leukopak_perm-cells_multiome_200M_atac_filtered_fragments.tsv.gz",
+    # 10x multiome
+    "10k_PBMC_Multiome_nextgem_Chromium_X_atac_fragments.tsv.gz",
+    "10k_PBMC_Multiome_nextgem_Chromium_Controller_atac_fragments.tsv.gz",
+    "pbmc_granulocyte_sorted_10k_atac_fragments.tsv.gz",
+    "pbmc_granulocyte_sorted_3k_atac_fragments.tsv.gz",
+    # asap
+    "GSM4732109_CD28_CD3_control_ASAP_fragments.tsv.gz",
+    "GSM4732111_CD28_CD3_stim_ASAP_fragments.tsv.gz",
+    # asap cite
+    "",
+    "",
+    # wnn
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+
+    # neat
+    "GSM5396332_lane1_atac_fragments.tsv.gz",
+    "GSM5396336_lane2_atac_fragments.tsv.gz",
+    # "GSM5916383_atac_fragments.tsv.gz",
+    # dogcite
+    "",
+    "GSM6032887_DIG_atac_fragments.tsv.gz",
+    "GSM6032891_LLL_atac_fragments.tsv.gz",
+    "GSM6032895_DOGMA_atac_fragments.tsv.gz",
+    # issaac
+    "fragments.tsv.gz",
+]
+combs = [
+    # dogma
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # tea
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # tea multiome
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # 10x multiome
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # asap
+    [ ["atac", "adt"] ],
+    [ ["atac", "adt"] ],
+    # asap cite
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    # wnn
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+
+    # neat
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # [ ["atac", "rna"] ],
+    # dogcite
+    [ ["rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # issaac
+    [ ["atac", "rna"] ],
+]
+comb_ratios = [
+    # dogma
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # tea
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # tea multiome
+    [ 1 ], [ 1 ],
+    # 10x multiome
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # asap
+    [ 1 ], [ 1 ],
+    # asap cite
+    [ 1 ], [ 1 ],
+    # wnn
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    
+    # neat
+    [ 1 ], [ 1 ],
+    # dogcite
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # issaac
+    [ 1 ],
+]
+s_joint = [
+    # dogma
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],
+    # tea
+    [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ],
+    # tea multiome
+    [ 9 ], [ 10 ],
+    # 10x multiome
+    [ 11 ], [ 12 ], [ 13 ], [ 14 ],
+    # asap
+    [ 15 ], [ 16 ],
+    # asap cite
+    [ 17 ], [ 18 ],
+    # wnn
+    [ 19 ], [ 20 ], [ 21 ], [ 22 ], [ 23 ], [ 24 ], [ 25 ], [ 26 ], 
+    
+    # neat
+    [ 27 ], [ 28 ], 
+    # dogcite
+    [ 29 ], [ 30 ], [ 31 ], [ 32 ],
+    # issaac
+    [ 33 ],
+]
+train_ratio = 1
+N = 256
+
+[covid]
+raw_data_dirs=[
+    "data/sct/COVID-19-Haniffa/MH9143425",
+    "data/sct/COVID-19-Haniffa/BGCV09_CV0171",
+    "data/sct/COVID-19-Haniffa/MH9143277",
+    "data/sct/COVID-19-Haniffa/AP12",
+    "data/sct/COVID-19-Haniffa/AP11",
+    "data/sct/COVID-19-Haniffa/MH9143276",
+    "data/sct/COVID-19-Haniffa/MH9143427",
+    "data/sct/COVID-19-Haniffa/AP6",
+    "data/sct/COVID-19-Haniffa/MH9143325",
+    "data/sct/COVID-19-Haniffa/MH8919327",
+]
+raw_data_frags=[
+    "","","","","","","","","","",
+    ]
+comb_ratios =[[ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],]
+combs = [ 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    ]
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],
+    [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ],
+    [ 9 ],
+    ]
+train_ratio = 1
+N = 256
+
+[flu_a]
+raw_data_dirs=[
+    "data/sct/IAV/IA1_pbmc",
+    "data/sct/IAV/IA2_pbmc",
+    "data/sct/IAV/IC1_pbmc",
+    "data/sct/IAV/IC2_pbmc",
+    "data/sct/IAV/PI1_pbmc",
+    "data/sct/IAV/PI2_pbmc",
+    "data/sct/IAV/PI3_pbmc",
+]
+raw_data_frags=[
+    "","","","","","","",
+    ]
+comb_ratios =[[ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],]
+combs = [ 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ],
+    ]
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],
+    [ 4 ], [ 5 ], [ 6 ],
+    ]
+train_ratio = 1
+N = 256
+
+[tuber]
+raw_data_dirs=[
+    "data/sct/tuber/TB6361266_39",
+    "data/sct/tuber/TB8165290_27",
+    "data/sct/tuber/TB7697020_35",
+    "data/sct/tuber/TB1792755_39",
+    "data/sct/tuber/TB1611911_36",
+    "data/sct/tuber/TB3329322_4",
+    "data/sct/tuber/TB7392866_14",
+    "data/sct/tuber/TB9100553_14",
+    "data/sct/tuber/TB2374859_27",
+    "data/sct/tuber/TB7300167_2",
+    "data/sct/tuber/TB2531658_39",
+    "data/sct/tuber/TB0533278_40",
+    "data/sct/tuber/TB6692076_39",
+    "data/sct/tuber/TB8866882_36",
+    "data/sct/tuber/TB2247275_40",
+    "data/sct/tuber/TB8896313_18",
+    "data/sct/tuber/TB6209826_44",
+    "data/sct/tuber/TB5556538_37",
+    "data/sct/tuber/TB4598647_35",
+    "data/sct/tuber/TB6270533_36",
+]
+raw_data_frags=[
+    "","","","","","","","","","","","","","","","","","","","",
+    ]
+comb_ratios =[[ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],]
+combs = [ 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    ]
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],
+    [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ],
+    [ 9 ], [ 10 ],
+    [ 11 ], [ 12 ], [ 13 ], [ 14 ],
+    [ 15 ], [ 16 ],
+    [ 17 ], [ 18 ],
+    [ 19 ],
+    ]
+train_ratio = 1
+N = 256
+
+[atlas_disease_cl]
+tasks = [
+    'atlas_new',
+    'covid',
+    'flu_a',
+    'tuber',
+]
+raw_data_dirs = [
+    "data/sct/COVID-19-Haniffa/MH9143425",
+    "data/sct/COVID-19-Haniffa/BGCV09_CV0171",
+    "data/sct/COVID-19-Haniffa/MH9143277",
+    "data/sct/COVID-19-Haniffa/AP12",
+    "data/sct/COVID-19-Haniffa/AP11",
+    "data/sct/COVID-19-Haniffa/MH9143276",
+    "data/sct/COVID-19-Haniffa/MH9143427",
+    "data/sct/COVID-19-Haniffa/AP6",
+    "data/sct/COVID-19-Haniffa/MH9143325",
+    "data/sct/COVID-19-Haniffa/MH8919327",
+    "data/sct/IAV/IA1_pbmc",
+    "data/sct/IAV/IA2_pbmc",
+    "data/sct/IAV/IC1_pbmc",
+    "data/sct/IAV/IC2_pbmc",
+    "data/sct/IAV/PI1_pbmc",
+    "data/sct/IAV/PI2_pbmc",
+    "data/sct/IAV/PI3_pbmc",
+    "data/sct/tuber/TB6361266_39",
+    "data/sct/tuber/TB8165290_27",
+    "data/sct/tuber/TB7697020_35",
+    "data/sct/tuber/TB1792755_39",
+    "data/sct/tuber/TB1611911_36",
+    "data/sct/tuber/TB3329322_4",
+    "data/sct/tuber/TB7392866_14",
+    "data/sct/tuber/TB9100553_14",
+    "data/sct/tuber/TB2374859_27",
+    "data/sct/tuber/TB7300167_2",
+    "data/sct/tuber/TB2531658_39",
+    "data/sct/tuber/TB0533278_40",
+    "data/sct/tuber/TB6692076_39",
+    "data/sct/tuber/TB8866882_36",
+    "data/sct/tuber/TB2247275_40",
+    "data/sct/tuber/TB8896313_18",
+    "data/sct/tuber/TB6209826_44",
+    "data/sct/tuber/TB5556538_37",
+    "data/sct/tuber/TB4598647_35",
+    "data/sct/tuber/TB6270533_36",
+]
+raw_data_frags = [
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",
+]
+combs = [
+    # dogma
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # tea
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # tea multiome
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # 10x multiome
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # asap
+    [ ["atac", "adt"] ],
+    [ ["atac", "adt"] ],
+    # asap cite
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    # wnn
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+    [ ["rna", "adt"] ],
+
+    # neat
+    [ ["atac", "rna"] ],
+    [ ["atac", "rna"] ],
+    # [ ["atac", "rna"] ],
+    # dogcite
+    [ ["rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    [ ["atac", "rna", "adt"] ],
+    # issaac
+    [ ["atac", "rna"] ],
+
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ], [ [ "rna" ] ], 
+    [ [ "rna" ] ],
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+    [ [ "rna", "adt"] ], [ [ "rna", "adt"] ], 
+]
+comb_ratios = [
+    # dogma
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # tea
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # tea multiome
+    [ 1 ], [ 1 ],
+    # 10x multiome
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # asap
+    [ 1 ], [ 1 ],
+    # asap cite
+    [ 1 ], [ 1 ],
+    # wnn
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    
+    # neat
+    [ 1 ], [ 1 ],
+    # dogcite
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    # issaac
+    [ 1 ],
+
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+    [ 1 ],
+]
+s_joint = [
+    # dogma
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],
+    # tea
+    [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ],
+    # tea multiome
+    [ 9 ], [ 10 ],
+    # 10x multiome
+    [ 11 ], [ 12 ], [ 13 ], [ 14 ],
+    # asap
+    [ 15 ], [ 16 ],
+    # asap cite
+    [ 17 ], [ 18 ],
+    # wnn
+    [ 19 ], [ 20 ], [ 21 ], [ 22 ], [ 23 ], [ 24 ], [ 25 ], [ 26 ], 
+    
+    # neat
+    [ 27 ], [ 28 ],
+    # dogcite
+    [ 29 ], [ 30 ], [ 31 ], [ 32 ],
+    # issaac
+    [ 33 ],
+
+    [ 34 ], [ 35 ], [ 36 ], [ 37 ], [ 38 ], [ 39 ], [ 40 ], [ 41 ], [ 42 ], [ 43 ], [ 44 ], [ 45 ], [ 46 ], [ 47 ], [ 48 ], [ 49 ], [ 50 ], [ 51 ],
+    [ 52 ], [ 53 ], [ 54 ], [ 55 ], [ 56 ], [ 57 ], [ 58 ], [ 59 ], [ 60 ], [ 61 ], [ 62 ], [ 63 ], [ 64 ], [ 65 ], [ 66 ], [ 67 ], [ 68 ], [ 69 ],
+    [ 70 ],
+    # [ 0 ],
+]
+train_ratio = 1
+N = 256
