@@ -330,10 +330,16 @@ def subsample(pred_dir='', size=100000, remove_old=True):
         if o.subsample_method == 'bts':
             # for p in os.listdir(pj(pred_dir)):
             # i = int(re.sub('subset_','', p))
-            
+
             preds = []
-            for j in os.listdir(pj(pred_dir, 'subset_%d'%i, 'z', 'joint')):
-                preds += utils.load_csv(pj(pred_dir, 'subset_%d'%i, 'z', 'joint', j))
+            joint_dir = pj(pred_dir, 'subset_%d'%i, 'z', 'joint')
+            if not os.path.isdir(joint_dir):
+                raise FileNotFoundError(
+                    "Missing subsample prediction directory: %s. "
+                    "Run with action 'predict_subsample' before 'subsample'." % joint_dir
+                )
+            for j in os.listdir(joint_dir):
+                preds += utils.load_csv(pj(joint_dir, j))
             preds = np.array(preds)
             n = BallTreeSubsample(preds[:, :32], s)
             n.sort()

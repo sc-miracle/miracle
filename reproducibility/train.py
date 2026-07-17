@@ -42,6 +42,10 @@ parser.add_argument('--adv', type=int, default='30',
 o = parser.parse_args()
 # %%
 
+if 'subsample' in o.actions and 'predict_subsample' not in o.actions:
+    insert_at = o.actions.index('subsample')
+    o.actions.insert(insert_at, 'predict_subsample')
+
 data_config = utils.load_toml("configs/data.toml")[o.task]
 
 # %%

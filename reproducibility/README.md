@@ -59,7 +59,7 @@ done
 ### **Step 2: Integration**
 
 ```bash
-python train.py --cuda 0 --task dcm_hcm --exp_prefix continual_ --max_size 200000 --actions train predict_all_latent --epoch_list 500
+python train.py --cuda 0 --task dcm_hcm --exp_prefix continual_ --max_size 200000 --actions train predict_all_latent subsample --epoch_list 500
 ```
 
 ### **Step 3: Evaluation and Visualization**
@@ -94,7 +94,7 @@ Rscript preprocess/combine_subsets.R --task p8_0 && py preprocess/split_mat.py -
 ### **Step 2: Integration**
 
 ```bash
-python train.py --cuda 0 --task teadog --exp_prefix continual_ --actions train predict_all_latent
+python train.py --cuda 0 --task teadog --exp_prefix continual_ --actions train predict_all_latent subsample
 ```
 
 ### **Step 3: Evaluation and Visualization**
@@ -127,7 +127,7 @@ Rscript preprocess/combine_subsets.R --task W6 && Rscript preprocess/combine_uns
 ### **Step 2: Integration**
 
 ```bash
-python train.py --cuda 0 --task teadog --exp_prefix continual_ --actions train predict_all_latent
+python train.py --cuda 0 --task teadog --exp_prefix continual_ --actions train predict_all_latent subsample
 ```
 
 ### **Step 3: Evaluation and Visualization**
