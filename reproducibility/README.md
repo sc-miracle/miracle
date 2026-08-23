@@ -1,9 +1,5 @@
 MIRACLE is an online learning framework designed for scalable multimodal integration. 
 
-# User-friendly Package
-
-This repository is dedicated to reproducing results 2–7 from the manuscript. For a user-friendly package, please visit [sc-miracle/miracle](https://github.com/sc-miracle/miracle).
-
 # Guidance for Reproducing the Manuscript Results
 
 ## Preparation
@@ -229,4 +225,4 @@ python train.py --task atlas_disease_cl --cuda 0 --REPLAY 1 --denovo 0 --use_shm
 
 ## **Analysis and Comparison Results**
 
-For further details, refer to `reproducibility-code`.
+For further details, refer to `results`.
